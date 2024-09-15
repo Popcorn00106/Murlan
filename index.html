@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murlan the Wizard Slot Game</title>
+    <title>Murlan the Wizard Slot Machine</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="game-container">
         <h1>Murlan the Wizard Slot Machine</h1>
         <div class="coin-display">
-            <p>Coins: <span id="coin-balance">100</span></p>
+            <p>Coins: <span id="coin-balance">1000</span></p>
         </div>
-
-        <!-- Pay Table -->
+        <div class="bet-section">
+            <p>Bet Amount:</p>
+            <button class="bet-button" data-bet="10">10 Coins</button>
+            <button class="bet-button" data-bet="50">50 Coins</button>
+            <button class="bet-button" data-bet="100">100 Coins</button>
+        </div>
         <div class="pay-table">
             <h2>Pay Table</h2>
-            <ul>
+            <ul id="pay-table-page-1">
                 <li>3x $ : 30 coins</li>
                 <li>3x 7 : 50 coins</li>
                 <li>3x * : 20 coins</li>
                 <li>3x 🍒 : 15 coins</li>
                 <li>3x 🔔 : 25 coins</li>
             </ul>
+            <button id="next-pay-table">Next Page</button>
         </div>
-
-        <!-- Slot Machine Reel (3x3 Grid) -->
         <div class="reel-grid" id="reel-grid">
-            <!-- 9 reels in total -->
             <div class="reel" id="reel-1">?</div>
             <div class="reel" id="reel-2">?</div>
             <div class="reel" id="reel-3">?</div>
@@ -38,26 +40,13 @@
             <div class="reel" id="reel-8">?</div>
             <div class="reel" id="reel-9">?</div>
         </div>
-
-        <!-- Question Section -->
-        <div class="question-section" id="question-section" style="display: none;">
-            <p id="question-text">You encounter a mysterious figure. What do you do?</p>
-            <button class="choice-button" data-choice="1">Ask for Guidance</button>
-            <button class="choice-button" data-choice="2">Challenge to a Duel</button>
-            <button class="choice-button" data-choice="3">Ignore and Move On</button>
-        </div>
-
-        <!-- Spin Button -->
         <div class="controls">
             <button id="spin-button">Spin</button>
         </div>
-
-        <!-- Game Status -->
         <div class="game-status">
             <p id="status-text">Press Spin to play!</p>
         </div>
     </div>
-
     <script src="game.js"></script>
 </body>
 </html>
